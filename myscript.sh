@@ -6,11 +6,12 @@
 #   -> My script may generate a mysql warning on execution because password is exposed in this.  #
 #   -> I've made one demo account on slack and created a sample workspace on it and made one     #
 #       sample app where I've enabled webhook to send alert messages                             #
+#   -> Kindly change password and db-name according to your requirement                          #
 ##################################################################################################
 
 u="root"                             #mysql username
 p="UZAC6YcTmIvlPukC"                 #mysql password
-db="mobibuzz_dev"                    #mysql db_name
+db="test_db"                    #mysql db_name
 mysql -u $u -p$p -e "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_SCHEMA='$db'" > /tmp/mom
                                                                                   #storing all tables name of db in temporary file 
 declare -i table_count=$(cat /tmp/mom | wc -l)  #storing count of table
