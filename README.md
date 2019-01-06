@@ -1,0 +1,1 @@
+# MYSQL_script_to_check_all_tables_for_autoincrement_ids_scarcity
